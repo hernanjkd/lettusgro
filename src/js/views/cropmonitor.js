@@ -23,6 +23,9 @@ export const Cropmonitor = props => {
 	}
 	function counter() {
 		setTimeout(test, 2000);
+		setTimeout(test, 4000);
+		setTimeout(test, 6000);
+		setTimeout(test, 8000);
 	}
 	return (
 		<>
