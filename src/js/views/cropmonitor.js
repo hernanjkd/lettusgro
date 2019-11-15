@@ -25,8 +25,16 @@ export const Cropmonitor = props => {
 
 	useEffect(
 		() => {
-			if (runProgressBar) setTimeout(test, 2000);
-			if (count === 100) setRunProgressBar(false);
+			if (runProgressBar) {
+				setTimeout(test, 6000);
+				if (count === 25) actions.sendMsg("Lettus notification: water your plants simple");
+				if (count === 50)
+					actions.sendMsg(
+						"Lettus notification: eeehhh water your plants nah its gona say turn on the lights"
+					);
+			}
+			if (count === 75) setRunProgressBar(false);
+			if (count === 100) actions.sendMsg("Lettus notification: harvest time! smoke a doobie");
 		},
 		[count, runProgressBar]
 	);

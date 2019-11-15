@@ -1,6 +1,9 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		actions: {
+			sendMsg: msg => {
+				console.log(msg);
+			},
 			register: (registerData, props) => {
 				fetch("https://3000-b7502b17-1c67-4583-8012-9cd42c597a0a.ws-us02.gitpod.io/register", {
 					method: "POST",
